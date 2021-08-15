@@ -1,62 +1,23 @@
-<?php
+<?php 
    
-$array_1 = [1,2,3];
-
-$array_2 = [
-    ['赤','青','黄'],
-    ['緑','紫','黒']
-];
-
-echo $array_2[1][1];
-
-$array_member = [
-    'name' => '本田',
-    'height' => 170,
-    'hobby' => 'サッカー'
-];
-
-echo $array_member['hobby'];
-
-$array_member_2 = [
+$members_2 = [
     '本田' => [
+        'name' => '本田',
         'height' => 170,
         'hobby' => 'サッカー'
     ],
     '香川' => [
-        'height' => 165,
+        'name' => '香川',
+        'height' => 160,
         'hobby' => 'サッカー'
     ]
-    ];
+];
 
-    echo $array_member_2['香川']['height'];
+foreach($members_2 as $members_1){
+    foreach($members_1 as $member => $value){
+        echo $member . 'は' . $value . 'です。';
+        echo "<br/>";
+    }
+}
 
-
-    $array_member_3 = [
-        '1kumi' => [
-             '本田' => [
-                 'height' => 170,
-                 'hobby' => 'サッカー' 
-             ],
-             '香川' => [
-                 'height' => 165,
-                 'hobby' => 'サッカー'
-             ]
-        ],
-        '2kumi' => [
-            '長友' => [
-                'height' => 160,
-                'hobby' => 'サッカー'
-            ],
-            '乾' => [
-                'height' => 168,
-                'hobby' => 'サッカー'
-            ]
-        ]
-        ];
-
-        echo $array_member_3['2kumi']['長友']['height'];
-
-        echo '<pre>';
-        var_dump($array_member_3);
-        echo '</pre>';
 ?>
