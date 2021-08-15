@@ -1,19 +1,11 @@
 <?php 
    
-$postalCode = '123-4567';
+require 'common/common.php';
 
-function checkPostalCode($str){
-    $replaced = str_replace('-','',$str);
-    $length = strlen($replaced);
-
-    var_dump($length);
-
-    if($length === 7){
-        return true;
-    }
-    return false;
-}
-
-var_dump(checkPostalCode($postalCode));
+echo $commonVariable;
+echo "<pre>";
+echo __DIR__;
+echo "</pre>";
+commonTest();
 
 ?>
