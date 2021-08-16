@@ -1,11 +1,10 @@
 <?php 
-   
-require 'common/common.php';
+    $test = '123';
+    $test_2 = '456';
 
-echo $commonVariable;
-echo "<pre>";
-echo __DIR__;
-echo "</pre>";
-commonTest();
+    echo $test;
+    exit;
+    echo $test_2;
 
+    phpinfo();
 ?>
