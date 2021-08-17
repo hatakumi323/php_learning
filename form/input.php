@@ -3,6 +3,8 @@
 
     session_start();
 
+    require 'validation.php';
+
     header("X-FRAME-OPTIONS: DENY"); 
 
     if(!empty($_POST)){
